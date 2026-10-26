@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BAASH AUTOS — Good Ride, Better Deals | Buy, Sell, Swap &amp; Pre-Order Cars</title>
+<meta name="description" content="Baash Autos — buy quality cars, sell your car, swap your current car, pre-order your preferred vehicle, and own a car with 40% down payment (subject to terms). Good Ride, Better Deals." />
+<meta name="keywords" content="Baash Autos, buy cars in Nigeria, sell my car in Nigeria, car swap services, pre-order cars in Nigeria, own a car with 40% down payment, affordable car deals in Nigeria" />
+<meta property="og:title" content="BAASH AUTOS — Good Ride, Better Deals" />
+<meta property="og:description" content="Buy, sell, swap, or pre-order a car. Enquire about owning a car with 40% down payment, subject to Baash Autos' terms and approval." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          black: '#0B0B0B',
+          charcoal: '#1A1A1A',
+          graphite: '#2A2A2A',
+          silver: '#C8CDD4',
+          gold: '#D4AF37',
+          goldlight: '#F0D77B',
+          offwhite: '#F7F7F5',
+        },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; background:#D4AF37; color:#0B0B0B; padding:.85rem 1.75rem; border-radius:9999px; font-weight:700; letter-spacing:.02em; transition:.2s; }
+  .btn-gold:hover { background:#F0D77B; transform: translateY(-1px); }
+  .btn-outline { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border:1.5px solid rgba(212,175,55,.7); color:#fff; padding:.85rem 1.75rem; border-radius:9999px; font-weight:600; transition:.2s; }
+  .btn-outline:hover { background:#D4AF37; color:#0B0B0B; border-color:#D4AF37; }
+  .btn-dark { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; background:#0B0B0B; color:#fff; padding:.85rem 1.75rem; border-radius:9999px; font-weight:700; transition:.2s; }
+  .btn-dark:hover { background:#2A2A2A; }
+  .card-hover { transition: transform .35s ease, box-shadow .35s ease; }
+  .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] > summary .plus { transform: rotate(45deg); }
+  .plus { transition: transform .2s ease; display:inline-block; }
+  .hero-overlay { background: linear-gradient(120deg, rgba(11,11,11,.85) 0%, rgba(11,11,11,.55) 55%, rgba(11,11,11,.25) 100%); }
+  .gold-underline { background-image: linear-gradient(transparent 60%, rgba(212,175,55,.35) 60%); background-repeat: no-repeat; background-size: 100% 100%; }
+</style>
+</head>
+<body class="bg-offwhite text-charcoal antialiased">
+
+<!-- ===== NAVBAR ===== -->
+<header class="sticky top-0 z-50 bg-black/95 text-white backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+    <a href="#home" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gold text-black font-black">B</span>
+      <span class="text-lg font-black tracking-tight">BAASH <span class="text-gold">AUTOS</span></span>
+    </a>
+    <ul class="hidden items-center gap-6 lg:flex">
+      <li><a href="#home" class="text-sm text-silver hover:text-gold transition">Home</a></li>
+      <li><a href="#cars" class="text-sm text-silver hover:text-gold transition">Available Cars</a></li>
+      <li><a href="#downpayment" class="text-sm text-silver hover:text-gold transition">40% Down Payment</a></li>
+      <li><a href="#sell" class="text-sm text-silver hover:text-gold transition">Sell Your Car</a></li>
+      <li><a href="#swap" class="text-sm text-silver hover:text-gold transition">Swap Cars</a></li>
+      <li><a href="#preorder" class="text-sm text-silver hover:text-gold transition">Pre-Order</a></li>
+      <li><a href="#contact" class="text-sm text-silver hover:text-gold transition">Contact</a></li>
+      <li>
+        <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20car%20services."
+           target="_blank" rel="noopener noreferrer" class="btn-gold !px-4 !py-2 text-sm">Chat on WhatsApp</a>
+      </li>
+    </ul>
+    <button id="menuBtn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-charcoal px-4 pb-4 lg:hidden">
+    <ul class="space-y-1">
+      <li><a href="#home" class="block py-2 text-silver hover:text-gold">Home</a></li>
+      <li><a href="#cars" class="block py-2 text-silver hover:text-gold">Available Cars</a></li>
+      <li><a href="#downpayment" class="block py-2 text-silver hover:text-gold">40% Down Payment</a></li>
+      <li><a href="#sell" class="block py-2 text-silver hover:text-gold">Sell Your Car</a></li>
+      <li><a href="#swap" class="block py-2 text-silver hover:text-gold">Swap Cars</a></li>
+      <li><a href="#preorder" class="block py-2 text-silver hover:text-gold">Pre-Order</a></li>
+      <li><a href="#faqs" class="block py-2 text-silver hover:text-gold">FAQs</a></li>
+      <li><a href="#contact" class="block py-2 text-silver hover:text-gold">Contact</a></li>
+      <li class="pt-2">
+        <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20car%20services."
+           target="_blank" rel="noopener noreferrer" class="btn-gold w-full">Chat on WhatsApp</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="relative flex min-h-[92vh] items-center overflow-hidden bg-black text-white">
+  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80"
+       alt="Premium luxury car hero image (illustrative)"
+       class="absolute inset-0 h-full w-full object-cover" />
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="relative mx-auto max-w-7xl px-4 py-24 md:px-8">
+    <p class="mb-5 inline-block rounded-full border border-gold/40 bg-black/40 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-gold">
+      Good Ride • Better Deals
+    </p>
+    <h1 class="max-w-3xl text-4xl font-black leading-[1.05] md:text-6xl lg:text-7xl">
+      YOUR DREAM CAR IS <span class="gold-underline">CLOSER</span> THAN YOU THINK.
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg font-semibold text-goldlight md:text-2xl">
+      Own a Car with Just 40% Down Payment.
+    </p>
+    <p class="mt-4 max-w-2xl text-silver md:text-lg">
+      Discover better deals on quality cars with Baash Autos. Buy your next car,
+      sell your current one, swap for something better, or pre-order the vehicle
+      you've always wanted.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#cars" class="btn-gold">Explore Available Cars</a>
+      <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20car%20services."
+         target="_blank" rel="noopener noreferrer" class="btn-outline">Chat with Us on WhatsApp</a>
+    </div>
+    <p class="mt-10 text-sm font-bold tracking-[0.35em] text-gold/80">GOOD RIDE. BETTER DEALS.</p>
+  </div>
+</section>
+
+<!-- ===== 40% DOWN PAYMENT ===== -->
+<section id="downpayment" class="bg-black py-20 text-white">
+  <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 md:grid-cols-2 md:px-8">
+    <div>
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-gold">Flexible Car Ownership</p>
+      <h2 class="text-3xl font-black leading-tight md:text-5xl">
+        DRIVE YOUR DREAM CAR WITH <span class="text-gold">40% DOWN PAYMENT</span>
+      </h2>
+      <p class="mt-5 max-w-xl text-silver">
+        You don't have to pay the full amount upfront to start your car
+        ownership journey. Contact Baash Autos to discuss available vehicles,
+        payment arrangements, eligibility, and applicable terms.
+      </p>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-gold/30 bg-charcoal/60 p-6">
+          <p class="text-4xl font-black text-gold md:text-5xl">40%</p>
+          <p class="mt-2 text-sm font-semibold text-white">Initial down payment</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+          <p class="text-2xl font-bold text-white md:text-3xl">Remaining Balance</p>
+          <p class="mt-2 text-sm text-silver">Discuss the applicable payment terms with Baash Autos.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-xs text-silver/80">
+        Subject to Baash Autos' applicable terms and approval. Eligibility, vehicle
+        availability, and payment arrangements must be confirmed directly.
+      </p>
+
+      <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27m%20interested%20in%20owning%20a%20car%20with%2040%25%20down%20payment.%20Please%20share%20the%20available%20cars%20and%20explain%20the%20payment%20terms."
+         target="_blank" rel="noopener noreferrer" class="btn-gold mt-8">Ask About the 40% Offer</a>
+    </div>
+    <div class="relative">
+      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80"
+           alt="Premium modern car (illustrative)"
+           class="w-full rounded-3xl object-cover shadow-2xl" loading="lazy" />
+      <div class="absolute -bottom-6 -left-6 hidden rounded-2xl bg-gold px-6 py-4 text-black shadow-xl sm:block">
+        <p class="text-xs font-bold uppercase tracking-widest">Starting From</p>
+        <p class="text-3xl font-black">40%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AVAILABLE CARS (EMPTY STATE) ===== -->
+<section id="cars" class="bg-offwhite py-20">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Inventory</p>
+        <h2 class="mt-2 text-3xl font-black md:text-5xl">FIND YOUR NEXT RIDE</h2>
+        <p class="mt-3 max-w-xl text-charcoal/70">
+          Explore available vehicles and contact us to find the right car for
+          your needs and budget.
+        </p>
+      </div>
+      <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27d%20like%20to%20know%20which%20cars%20are%20currently%20available.%20Please%20share%20the%20list%20and%20prices."
+         target="_blank" rel="noopener noreferrer" class="btn-dark text-sm">Ask About Current Stock</a>
+    </div>
+
+    <!-- Empty state -->
+    <div class="mt-10 rounded-3xl border border-dashed border-charcoal/20 bg-white p-10 text-center">
+      <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold/15 text-gold">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 13l1-3a3 3 0 013-2h6a3 3 0 013 2l1 3M5 13h14v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-1H8v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-4z"/>
+        </svg>
+      </div>
+      <h3 class="mt-4 text-xl font-bold">Vehicle listings coming soon</h3>
+      <p class="mx-auto mt-2 max-w-lg text-sm text-charcoal/70">
+        Baash Autos has not published verified inventory on this website yet.
+        Contact us on WhatsApp to see what's currently available, or send a
+        pre-order enquiry for a specific car.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27d%20like%20to%20know%20which%20cars%20are%20currently%20available.%20Please%20share%20the%20list%20and%20prices."
+           target="_blank" rel="noopener noreferrer" class="btn-gold text-sm">Check Stock on WhatsApp</a>
+        <a href="#preorder" class="btn-dark text-sm">Pre-Order a Car</a>
+      </div>
+    </div>
+
+    <!-- When real listings exist, replace the block above with vehicle cards like this template:
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="card-hover overflow-hidden rounded-2xl bg-white shadow-sm">
+        <div class="relative h-56 overflow-hidden">
+          <img src="YOUR_IMAGE.jpg" alt="Vehicle photo" class="h-full w-full object-cover" loading="lazy" />
+          <span class="absolute left-4 top-4 rounded-full bg-black/80 px-3 py-1 text-xs font-bold text-gold">Available</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Vehicle Name</h3>
+          <p class="mt-1 text-sm text-charcoal/70">Make • Model • Year</p>
+          <ul class="mt-4 grid grid-cols-2 gap-2 text-xs text-charcoal/70">
+            <li>Transmission: Automatic</li>
+            <li>Fuel: Petrol</li>
+            <li>Mileage: 00,000 km</li>
+            <li>Price: ₦0,000,000</li>
+          </ul>
+          <div class="mt-5 flex gap-2">
+            <a href="#cars" class="btn-dark !px-4 !py-2 text-xs">View Details</a>
+            <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27m%20interested%20in%20the%20[Vehicle%20Name].%20Please%20confirm%20availability%20and%20provide%20more%20details."
+               target="_blank" rel="noopener noreferrer" class="btn-gold !px-4 !py-2 text-xs">Enquire on WhatsApp</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    -->
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="bg-white py-20">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <div class="text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Our Services</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">MORE WAYS TO GET YOUR NEXT CAR</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-charcoal/70">
+        Whether you're buying, selling, swapping, or pre-ordering — we've got you covered.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Buy -->
+      <article class="card-hover overflow-hidden rounded-2xl bg-offwhite shadow-sm">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+             alt="Buy a quality car (illustrative)" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h3 class="text-lg font-black">Buy a Car</h3>
+          <p class="mt-2 text-sm text-charcoal/70">Looking for your next vehicle? Explore available options and contact Baash Autos for assistance choosing a suitable ride.</p>
+          <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27m%20looking%20to%20buy%20a%20car.%20Please%20share%20available%20options."
+             target="_blank" rel="noopener noreferrer" class="btn-gold mt-5 !py-2 text-xs">Find a Car</a>
+        </div>
+      </article>
+
+      <!-- Sell -->
+      <article id="sell" class="card-hover overflow-hidden rounded-2xl bg-offwhite shadow-sm">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"
+             alt="Sell your car (illustrative)" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h3 class="text-lg font-black">Sell Your Car</h3>
+          <p class="mt-2 text-sm text-charcoal/70">Want to sell your current vehicle? Contact Baash Autos to discuss your car and receive information about the selling process.</p>
+          <a href="#sell-form" class="btn-gold mt-5 !py-2 text-xs">Sell My Car</a>
+        </div>
+      </article>
+
+      <!-- Swap -->
+      <article id="swap" class="card-hover overflow-hidden rounded-2xl bg-offwhite shadow-sm">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80"
+             alt="Swap your car (illustrative)" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h3 class="text-lg font-black">Swap Your Car</h3>
+          <p class="mt-2 text-sm text-charcoal/70">Ready for an upgrade or a different vehicle? Ask about swapping your current car for another available option.</p>
+          <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27m%20interested%20in%20swapping%20my%20current%20car.%20Please%20let%20me%20know%20the%20details%20and%20what%20information%20you%20need%20from%20me."
+             target="_blank" rel="noopener noreferrer" class="btn-gold mt-5 !py-2 text-xs">Swap My Car</a>
+        </div>
+      </article>
+
+      <!-- Pre-Order -->
+      <article id="preorder" class="card-hover overflow-hidden rounded-2xl bg-offwhite shadow-sm">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80"
+             alt="Pre-order a car (illustrative)" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h3 class="text-lg font-black">Pre-Order a Car</h3>
+          <p class="mt-2 text-sm text-charcoal/70">Looking for a specific make or model that is not currently listed? Send your requirements to Baash Autos to discuss a pre-order.</p>
+          <a href="#preorder-form" class="btn-gold mt-5 !py-2 text-xs">Pre-Order a Car</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE ===== -->
+<section class="bg-black py-20 text-white">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <div class="text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Why Baash Autos</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">WHY CHOOSE BAASH AUTOS?</h2>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Flexible Car Ownership</h3>
+        <p class="mt-2 text-sm text-silver">A 40% down payment option, subject to applicable terms and approval.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0zM3 12h18M12 3a15 15 0 010 18"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Multiple Ways to Buy</h3>
+        <p class="mt-2 text-sm text-silver">Purchase, swap, or pre-order — choose the path that works for you.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8 8-4-4"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Sell Your Current Car</h3>
+        <p class="mt-2 text-sm text-silver">An option to enquire about selling your current car to Baash Autos.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Direct Communication</h3>
+        <p class="mt-2 text-sm text-silver">Talk to us directly on WhatsApp for quick answers and updates.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal/60 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 7h7l-5.7 4.2 2.2 7L12 16l-6 4.2 2.2-7L2.5 9h7z"/></svg>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Better Deals</h3>
+        <p class="mt-2 text-sm text-silver">A focus on good rides and better deals — value first, always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="bg-offwhite py-20">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <div class="text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">How It Works</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">SIMPLE. CLEAR. CONFIDENT.</h2>
+    </div>
+    <ol class="mt-12 grid gap-6 md:grid-cols-4">
+      <li class="relative rounded-2xl bg-white p-6 shadow-sm">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-black font-black">1</span>
+        <h3 class="mt-4 font-black">Choose Your Service</h3>
+        <p class="mt-2 text-sm text-charcoal/70">Decide whether you want to buy, sell, swap, or pre-order a car.</p>
+      </li>
+      <li class="relative rounded-2xl bg-white p-6 shadow-sm">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-black font-black">2</span>
+        <h3 class="mt-4 font-black">Tell Us What You Need</h3>
+        <p class="mt-2 text-sm text-charcoal/70">Contact Baash Autos through WhatsApp and share your preferred vehicle or requirements.</p>
+      </li>
+      <li class="relative rounded-2xl bg-white p-6 shadow-sm">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-black font-black">3</span>
+        <h3 class="mt-4 font-black">Discuss the Details</h3>
+        <p class="mt-2 text-sm text-charcoal/70">Confirm vehicle availability, price, documentation, and any applicable payment terms.</p>
+      </li>
+      <li class="relative rounded-2xl bg-white p-6 shadow-sm">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-black font-black">4</span>
+        <h3 class="mt-4 font-black">Move Forward with Confidence</h3>
+        <p class="mt-2 text-sm text-charcoal/70">Proceed once the details and terms have been agreed upon.</p>
+      </li>
+    </ol>
+    <p class="mx-auto mt-8 max-w-3xl rounded-xl border border-gold/30 bg-gold/10 p-4 text-center text-sm text-charcoal">
+      <strong>Note on the 40% down payment offer:</strong> eligibility and the
+      remaining payment arrangement must be confirmed directly with Baash Autos.
+    </p>
+  </div>
+</section>
+
+<!-- ===== CAR SWAP BANNER ===== -->
+<section class="relative overflow-hidden bg-charcoal py-24 text-white">
+  <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80"
+       alt="Two premium cars (illustrative)" class="absolute inset-0 h-full w-full object-cover opacity-25" loading="lazy" />
+  <div class="relative mx-auto max-w-4xl px-4 text-center md:px-8">
+    <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Trade Up</p>
+    <h2 class="mt-2 text-3xl font-black md:text-5xl">READY FOR A BETTER RIDE? SWAP YOUR CAR!</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-silver">
+      Your current car could be the beginning of your next driving experience.
+      Contact Baash Autos to discuss your vehicle and the available swap options.
+    </p>
+    <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%27m%20interested%20in%20swapping%20my%20current%20car.%20Please%20let%20me%20know%20the%20details%20and%20what%20information%20you%20need%20from%20me."
+       target="_blank" rel="noopener noreferrer" class="btn-gold mt-8">Discuss a Car Swap</a>
+  </div>
+</section>
+
+<!-- ===== PRE-ORDER ===== -->
+<section class="bg-white py-20">
+  <div class="mx-auto grid max-w-7xl items-start gap-12 px-4 md:grid-cols-2 md:px-8">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Pre-Order</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">CAN'T FIND YOUR DREAM CAR? PRE-ORDER IT.</h2>
+      <p class="mt-4 text-charcoal/70">
+        Tell us the make, model, year, preferred specifications, and budget of
+        the car you're looking for. Contact Baash Autos to discuss availability,
+        estimated costs, delivery expectations, and the pre-order process.
+      </p>
+      <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80"
+           alt="Premium car (illustrative)" class="mt-8 w-full rounded-2xl object-cover" loading="lazy" />
+    </div>
+
+    <form id="preorder-form" class="rounded-3xl border border-charcoal/10 bg-offwhite p-6 shadow-sm md:p-8" novalidate>
+      <h3 class="text-2xl font-black">Send a Pre-Order Enquiry</h3>
+      <p class="mt-1 text-sm text-charcoal/60">We'll prepare your message — you send it to us on WhatsApp.</p>
+
+      <div class="mt-6 space-y-4">
+        <div>
+          <label class="block text-sm font-semibold" for="po-name">Full name *</label>
+          <input id="po-name" name="name" type="text" required
+                 class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-600" data-error="po-name"></p>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold" for="po-phone">WhatsApp number *</label>
+          <input id="po-phone" name="phone" type="tel" required
+                 class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-600" data-error="po-phone"></p>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold" for="po-car">Preferred car make and model *</label>
+          <input id="po-car" name="car" type="text" required
+                 class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-600" data-error="po-car"></p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="block text-sm font-semibold" for="po-year">Preferred year</label>
+            <input id="po-year" name="year" type="text"
+                   class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold" for="po-budget">Budget range</label>
+            <input id="po-budget" name="budget" type="text"
+                   class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold" for="po-extra">Additional requirements</label>
+          <textarea id="po-extra" name="extra" rows="3"
+                    class="mt-1 w-full rounded-lg border border-charcoal/20 bg-white px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-gold mt-6 w-full">Review &amp; Send via WhatsApp</button>
+
+      <div id="po-preview" class="mt-6 hidden rounded-xl border border-charcoal/10 bg-white p-4">
+        <p class="text-sm font-bold">Review your message</p>
+        <pre id="po-preview-text" class="mt-2 whitespace-pre-wrap text-xs text-charcoal/80"></pre>
+        <p class="mt-2 text-xs text-charcoal/60">This form does not send data to a server. Click below to send this enquiry to Baash Autos on WhatsApp.</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <a id="po-send" href="#" target="_blank" rel="noopener noreferrer" class="btn-gold !py-2 text-xs">Send on WhatsApp</a>
+          <button type="button" id="po-back" class="btn-dark !py-2 text-xs">Back to Form</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== SELL YOUR CAR ===== -->
+<section id="sell-form" class="bg-black py-20 text-white">
+  <div class="mx-auto grid max-w-7xl items-start gap-12 px-4 md:grid-cols-2 md:px-8">
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Sell Your Car</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">LOOKING TO SELL YOUR CAR? LET'S TALK.</h2>
+      <p class="mt-4 text-silver">
+        Contact Baash Autos to discuss selling your vehicle. Share the details
+        of your car so the business can review your enquiry.
+      </p>
+      <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80"
+           alt="Car for sale (illustrative)" class="mt-8 w-full rounded-2xl object-cover" loading="lazy" />
+      <p class="mt-4 text-xs text-silver/80">
+        To include photos of your car, please send them directly on WhatsApp
+        after submitting this form.
+      </p>
+    </div>
+
+    <form id="sell-form-el" class="rounded-3xl border border-white/10 bg-charcoal p-6 shadow-lg md:p-8" novalidate>
+      <h3 class="text-2xl font-black">Submit Your Car Details</h3>
+      <div class="mt-6 space-y-4">
+        <div>
+          <label class="block text-sm font-semibold text-white" for="s-name">Name *</label>
+          <input id="s-name" name="name" type="text" required
+                 class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white placeholder-white/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-400" data-error="s-name"></p>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-white" for="s-phone">WhatsApp number *</label>
+          <input id="s-phone" name="phone" type="tel" required
+                 class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white placeholder-white/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-400" data-error="s-phone"></p>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-white" for="s-car">Vehicle make and model *</label>
+          <input id="s-car" name="car" type="text" required
+                 class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white placeholder-white/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          <p class="mt-1 text-xs text-red-400" data-error="s-car"></p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label class="block text-sm font-semibold text-white" for="s-year">Year</label>
+            <input id="s-year" name="year" type="text"
+                   class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-white" for="s-mileage">Mileage (if known)</label>
+            <input id="s-mileage" name="mileage" type="text"
+                   class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-white" for="s-condition">Vehicle condition</label>
+          <select id="s-condition" name="condition"
+                  class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40">
+            <option value="">Select…</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Fair</option>
+            <option>Needs attention</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-white" for="s-price">Asking price (if known)</label>
+          <input id="s-price" name="price" type="text"
+                 class="mt-1 w-full rounded-lg border border-white/20 bg-black/40 px-4 py-2 text-white focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40" />
+        </div>
+      </div>
+
+      <button type="submit" class="btn-gold mt-6 w-full">Submit Car Details on WhatsApp</button>
+
+      <div id="s-preview" class="mt-6 hidden rounded-xl border border-white/10 bg-black/40 p-4">
+        <p class="text-sm font-bold text-white">Review your message</p>
+        <pre id="s-preview-text" class="mt-2 whitespace-pre-wrap text-xs text-silver"></pre>
+        <p class="mt-2 text-xs text-silver/70">This form does not send data to a server. Click below to send these details to Baash Autos on WhatsApp.</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <a id="s-send" href="#" target="_blank" rel="noopener noreferrer" class="btn-gold !py-2 text-xs">Send on WhatsApp</a>
+          <button type="button" id="s-back" class="btn-outline !py-2 text-xs">Back to Form</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS (HIDDEN PLACEHOLDER) ===== -->
+<!--
+  Real testimonials are not yet supplied. Publish this section on the live site only
+  after genuine customer feedback has been collected and approved.
+
+<section id="testimonials" class="bg-offwhite py-20">
+  <div class="mx-auto max-w-7xl px-4 md:px-8">
+    <h2 class="text-3xl font-black md:text-5xl">What Our Customers Say</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      [Add real reviews here]
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ===== FAQ ===== -->
+<section id="faqs" class="bg-offwhite py-20">
+  <div class="mx-auto max-w-4xl px-4 md:px-8">
+    <div class="text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">FAQ</p>
+      <h2 class="mt-2 text-3xl font-black md:text-5xl">FREQUENTLY ASKED QUESTIONS</h2>
+    </div>
+    <div class="mt-10 divide-y divide-charcoal/10 rounded-2xl bg-white px-4 shadow-sm">
+      <details class="py-4" open>
+        <summary class="flex items-center justify-between font-semibold">
+          Can I own a car with a 40% down payment?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">Baash Autos advertises a 40% down payment option. Contact the business to confirm eligible vehicles, applicable terms, and approval requirements.</p>
+      </details>
+      <details class="py-4">
+        <summary class="flex items-center justify-between font-semibold">
+          Can I sell my car to Baash Autos?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">You can contact the business with your car details to discuss the selling process.</p>
+      </details>
+      <details class="py-4">
+        <summary class="flex items-center justify-between font-semibold">
+          Can I swap my current car?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">Yes, you can enquire about swapping your vehicle. The available options and terms must be confirmed with Baash Autos.</p>
+      </details>
+      <details class="py-4">
+        <summary class="flex items-center justify-between font-semibold">
+          Can I pre-order a car that is not listed?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">You can send your preferred make, model, year, and budget to discuss a pre-order.</p>
+      </details>
+      <details class="py-4">
+        <summary class="flex items-center justify-between font-semibold">
+          How do I confirm a car's availability and price?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">Contact Baash Autos directly through WhatsApp to confirm current inventory, pricing, and vehicle details.</p>
+      </details>
+      <details class="py-4">
+        <summary class="flex items-center justify-between font-semibold">
+          Where is Baash Autos located?
+          <span class="plus text-2xl text-gold">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-charcoal/70">Contact Baash Autos through the WhatsApp number displayed on the website for business location and other contact details.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="bg-black py-20 text-white">
+  <div class="mx-auto max-w-4xl px-4 text-center md:px-8">
+    <p class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Contact</p>
+    <h2 class="mt-2 text-3xl font-black md:text-5xl">LET'S GET YOU INTO YOUR NEXT CAR</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-silver">
+      Whether you're buying, selling, swapping, or pre-ordering, Baash Autos is
+      ready to hear what you need.
+    </p>
+
+    <div class="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-charcoal p-5">
+        <p class="text-xs uppercase tracking-widest text-gold">Business</p>
+        <p class="mt-2 font-bold">Baash Autos</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal p-5">
+        <p class="text-xs uppercase tracking-widest text-gold">WhatsApp</p>
+        <p class="mt-2 font-bold">07062932293</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-charcoal p-5">
+        <p class="text-xs uppercase tracking-widest text-gold">Tagline</p>
+        <p class="mt-2 font-bold">Good Ride, Better Deals.</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20car%20services."
+       target="_blank" rel="noopener noreferrer" class="btn-gold mt-10 text-base">Chat with Baash Autos on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-charcoal text-silver">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-4 md:px-8">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gold text-black font-black">B</span>
+        <span class="text-lg font-black text-white">BAASH <span class="text-gold">AUTOS</span></span>
+      </div>
+      <p class="mt-3 text-sm font-semibold text-goldlight">Good Ride, Better Deals.</p>
+      <p class="mt-3 max-w-md text-sm">
+        Buy quality cars, sell your current car, swap for something better, or
+        pre-order the vehicle you've always wanted. Enquire about owning a car
+        with a 40% down payment, subject to applicable terms and approval.
+      </p>
+    </div>
+    <div>
+      <h4 class="font-bold text-white">Quick Links</h4>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-gold">Home</a></li>
+        <li><a href="#cars" class="hover:text-gold">Available Cars</a></li>
+        <li><a href="#downpayment" class="hover:text-gold">40% Down Payment</a></li>
+        <li><a href="#services" class="hover:text-gold">Services</a></li>
+        <li><a href="#faqs" class="hover:text-gold">FAQs</a></li>
+        <li><a href="#contact" class="hover:text-gold">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-white">Services</h4>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="#services" class="hover:text-gold">Buy a Car</a></li>
+        <li><a href="#sell-form" class="hover:text-gold">Sell Your Car</a></li>
+        <li><a href="#swap" class="hover:text-gold">Swap Your Car</a></li>
+        <li><a href="#preorder" class="hover:text-gold">Pre-Order a Car</a></li>
+        <li><a href="https://wa.me/2347062932293" target="_blank" rel="noopener noreferrer" class="hover:text-gold">WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-4 text-center text-xs">
+    © <span id="year"></span> Baash Autos. All rights reserved. Good Ride, Better Deals.
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/2347062932293?text=Hello%20Baash%20Autos%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20car%20services."
+   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+   class="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.7c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.1 7.1 0 01-1.3-1.6c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.9 11.9 0 004.6 4c.6.2 1.1.4 1.5.5a3.6 3.6 0 001.6.1 2.6 2.6 0 001.7-1.2 2.1 2.1 0 00.2-1.2c-.1-.1-.2-.2-.4-.3z"/>
+  </svg>
+</a>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const hidden = mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!hidden));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // FAQ: close others when one opens
+  const details = document.querySelectorAll('details');
+  details.forEach((d) => {
+    d.addEventListener('toggle', () => {
+      if (d.open) details.forEach((o) => { if (o !== d) o.open = false; });
+    });
+  });
+
+  // ---- Pre-order form ----
+  const poForm = document.getElementById('preorder-form');
+  const poPreview = document.getElementById('po-preview');
+  const poPreviewText = document.getElementById('po-preview-text');
+  const poSend = document.getElementById('po-send');
+  const poBack = document.getElementById('po-back');
+
+  function setErr(name, msg) {
+    const el = document.querySelector(`[data-error="${name}"]`);
+    if (el) el.textContent = msg || '';
+  }
+
+  poForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(poForm).entries());
+    let ok = true;
+    ['name','phone','car'].forEach(k => {
+      const id = 'po-' + k;
+      if (!(data[k] || '').trim()) { setErr(id, 'This field is required.'); ok = false; }
+      else setErr(id, '');
+    });
+    if (!ok) return;
+
+    const lines = [
+      "Hello Baash Autos, I'd like to place a pre-order enquiry. My details are:",
+      `- Name: ${data.name}`,
+      `- WhatsApp: ${data.phone}`,
+      `- Preferred car: ${data.car}`,
+    ];
+    if (data.year) lines.push(`- Preferred year: ${data.year}`);
+    if (data.budget) lines.push(`- Budget: ${data.budget}`);
+    if (data.extra) lines.push(`- Additional requirements: ${data.extra}`);
+    const msg = lines.join('\n');
+
+    poPreviewText.textContent = msg;
+    poSend.href = 'https://wa.me/2347062932293?text=' + encodeURIComponent(msg);
+    poPreview.classList.remove('hidden');
+    poPreview.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  poBack.addEventListener('click', () => {
+    poPreview.classList.add('hidden');
+    poForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // ---- Sell form ----
+  const sForm = document.getElementById('sell-form-el');
+  const sPreview = document.getElementById('s-preview');
+  const sPreviewText = document.getElementById('s-preview-text');
+  const sSend = document.getElementById('s-send');
+  const sBack = document.getElementById('s-back');
+
+  sForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(sForm).entries());
+    let ok = true;
+    ['name','phone','car'].forEach(k => {
+      const id = 's-' + k;
+      if (!(data[k] || '').trim()) { setErr(id, 'This field is required.'); ok = false; }
+      else setErr(id, '');
+    });
+    if (!ok) return;
+
+    const lines = [
+      "Hello Baash Autos, I'd like to sell my car. My details are:",
+      `- Name: ${data.name}`,
+      `- WhatsApp: ${data.phone}`,
+      `- Vehicle: ${data.car}`,
+    ];
+    if (data.year) lines.push(`- Year: ${data.year}`);
+    if (data.mileage) lines.push(`- Mileage: ${data.mileage}`);
+    if (data.condition) lines.push(`- Condition: ${data.condition}`);
+    if (data.price) lines.push(`- Asking price: ${data.price}`);
+    lines.push("I will send photos of the car on WhatsApp.");
+    const msg = lines.join('\n');
+
+    sPreviewText.textContent = msg;
+    sSend.href = 'https://wa.me/2347062932293?text=' + encodeURIComponent(msg);
+    sPreview.classList.remove('hidden');
+    sPreview.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  sBack.addEventListener('click', () => {
+    sPreview.classList.add('hidden');
+    sForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+</body>
+</html>
